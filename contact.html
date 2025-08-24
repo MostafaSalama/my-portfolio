@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Tourad - Contact</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./style/contact.css" />
+
+</head>
+<body>
+
+<!-- Header for navigation -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./resume.html" class="resume">Resume</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h1>Let's Connect! 💌</h1>
+    <p>If you ever want to grab a coffee/bubble tea (virtually) or just want a quick chat - you can find me on social media or send me a message here!</p>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+        <a href="https://github.com/MostafaSalama" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/mostafatourad" target="_blank">LinkedIn</a>
+        <a href="https://x.com/mostafatourad1" target="_blank">Twitter</a>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <form id="contactForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Success Notification -->
+    <div id="successNotification" class="success-notification">
+        Message sent successfully!
+    </div>
+
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <ul>
+        <li><a href="https://github.com/MostafaSalama" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/mostafatourad" target="_blank">LinkedIn</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+
+    <p>© 2024 Mostafa Tourad</p>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+<script type="module" src="./js/contact.js"></script>
+</body>
+</html>

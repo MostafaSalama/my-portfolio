@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostafa Tourad - Blog</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="./style/blog.css" />
+
+</head>
+<body>
+
+<!-- Header for navigation -->
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.html" class="resume">Resume</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Blog Section -->
+<section id="blog">
+    <h1>My Blog</h1>
+    <div class="blog-container" id="blog-container">
+        <!-- Blog posts will be dynamically generated here -->
+    </div>
+</section>
+
+<!-- Blog Dialog (hidden initially) -->
+<div id="blog-dialog" class="blog-dialog">
+    <div class="blog-dialog-content">
+        <span class="close" id="close-dialog">&times;</span>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-content"></p>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer>
+    <ul>
+        <li><a href="https://github.com/MostafaSalama" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/mostafatourad" target="_blank">LinkedIn</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+
+    <p>© 2024 Mostafa Tourad</p>
+</footer>
+
+<script src="./js/blog.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+    color: #E0E0E0;
+}
+
+header {
+    background-color: #121212;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for nav links */
+header nav ul li a {
+    color: #E0E0E0; /* Light Grey text for visibility */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px; /* Smooths out the edges */
+}
+
+/* Hover effect for links */
+header nav ul li a:hover {
+    background-color: #FF9800; /* Vibrant Orange background on hover */
+    color: #1B1B1B; /* Dark text when hovering */
+}
+
+/* Resume Section */
+#resume {
+    padding-top: 100px; /* Space for the fixed header */
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.resume {
+    border: 1px solid #4E9A06;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #FF9800;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* Download Button Styling */
+.download-resume {
+    text-align: center;
+    margin-top: 2rem;
+    position: fixed;
+    left: 10px;
+}
+
+.download-button {
+    background-color: #4E9A06; /* Green button */
+    color: #1B1B1B;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #FF9800; /* Orange on hover */
+    color: #E0E0E0;
+}
+
+
+
+/* Resume Section Containers */
+.resume-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2.5rem;
+}
+
+.resume-section:hover {
+    transform: translateY(-10px); /* Lifts the box slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+.resume-section h2 {
+    font-size: 2rem;
+    color: #FF9800;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resume-section p, .resume-section ul {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #E0E0E0;
+}
+
+/* Enhanced List Styling */
+.resume-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.resume-section ul li {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    position: relative;
+    font-size: 1.1rem;
+    color: #E0E0E0;
+}
+
+.resume-section ul li span {
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    color: #4E9A06; /* Green dot next to each skill */
+}
+
+/* Links Styling */
+.resume-section a {
+    color: #FF9800;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.resume-section a:hover {
+    color: #4E9A06; /* Change link color to green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .resume-section {
+        font-size: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Footer Section */
+footer {
+    background-color: #1B1B1B;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+footer ul li a {
+    color: #E0E0E0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #4E9A06; /* Deep Green */
+}

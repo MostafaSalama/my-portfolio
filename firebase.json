@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": ".",
+    "site": "mostafatourad",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
