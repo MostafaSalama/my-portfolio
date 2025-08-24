@@ -11,7 +11,6 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style/resume.css" />
 </head>
 <body>
@@ -19,12 +18,20 @@
 <!-- Header for navigation -->
 <header>
     <nav>
-        <ul>
+        <div class="nav-brand">
+            <span class="logo">MT</span>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./blog.html">Blog</a></li>
             <li><a href="./contact.html">Contact</a></li>
-            <li><a href="./resume.html" class="resume">Resume</a></li>
+            <li><a href="./resume.html" class="resume active">Resume</a></li>
         </ul>
     </nav>
 </header>
@@ -111,6 +118,39 @@
     easing: 'ease-out-cubic', // Smooth easing effect
     once: true // Animation only happens once as you scroll
   });
+</script>
+
+<script>
+// Mobile Menu Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('nav')) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+});
 </script>
 
 </body>

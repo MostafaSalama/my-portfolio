@@ -19,11 +19,19 @@
 <!-- Header for navigation -->
 <header>
     <nav>
-        <ul>
+        <div class="nav-brand">
+            <span class="logo">MT</span>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
             <li><a href="./index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./contact.html" class="active">Contact</a></li>
             <li><a href="./resume.html" class="resume">Resume</a></li>
         </ul>
     </nav>
@@ -78,5 +86,38 @@
 <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
 <script type="module" src="./js/contact.js"></script>
+
+<script>
+// Mobile Menu Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+    }
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+    
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('nav')) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+});
+</script>
 </body>
 </html>
