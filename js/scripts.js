@@ -48,6 +48,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Call the setGreeting function on page load
 window.onload = setGreeting;
 
+// Scroll-reveal observer
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
 // Mobile Menu Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');

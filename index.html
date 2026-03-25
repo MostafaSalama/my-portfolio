@@ -31,6 +31,7 @@
             <li><a href="#hero">Home</a></li>
             <li><a href="./about.html">About</a></li>
             <li><a href="./blog.html">Blog</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="./contact.html">Contact</a></li>
             <li><a href="./resume.html" class="resume">Resume</a></li>
         </ul>
@@ -44,22 +45,24 @@
 
 <section id="hero">
     <h1 id="greeting">Hello!</h1>
+    <span class="hero-subtitle">Full Stack Developer</span>
     <p>I am Mostafa Tourad, a Full Stack Developer who loves to build impactful digital experiences.</p>
     <div class="hero-cta">
-        <a href="#about" class="btn btn-primary">Discover My Work</a>
+        <a href="#projects" class="btn btn-primary">Discover My Work</a>
         <a href="./contact.html" class="btn btn-secondary">Get In Touch</a>
     </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+        <span class="scroll-indicator-chevron"></span>
+    </a>
 </section>
 <!-- About Section with Box and Image -->
-<section id="about">
+<section id="about" class="reveal">
     <div class="about-container">
-        <!-- Image of yourself -->
         <div class="about-image">
             <img src="your-image.png" alt="Mostafa Tourad">
         </div>
-        <!-- Box containing text -->
         <div class="about-box">
-            <h2>About My Job</h2>
+            <h2 class="section-title">About My Job</h2>
             <p class="summary">
                 I am a full stack developer with a passion for building dynamic and efficient web applications.
                 With expertise in technologies like JavaScript, Node.js, React, and Typescript, I specialize in creating
@@ -79,8 +82,8 @@
 
 
 <!-- My Toolkit Section -->
-<section id="toolkit">
-    <h2>My Toolkit</h2>
+<section id="toolkit" class="reveal">
+    <h2 class="section-title">My Toolkit</h2>
     <div class="toolkit-container">
         <!-- Each skill with icon/SVG and title -->
         <div class="toolkit-item">
@@ -148,8 +151,8 @@
 
 
 <!-- Work Experience Section -->
-<section id="work-experience">
-    <h1>Work Experience</h1>
+<section id="work-experience" class="reveal">
+    <h1 class="section-title">Work Experience</h1>
     <div class="experience-container">
 
         <!-- Pencil Spaces -->
@@ -197,10 +200,100 @@
         </div>
     </div>
 </section>
+
+<!-- Featured Projects Section -->
+<section id="projects" class="reveal">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+
+        <!-- Next DM -->
+        <div class="project-card">
+            <div class="project-card-accent"></div>
+            <h3>Next DM</h3>
+            <p>High-performance desktop download manager with chunked downloads, queue management, clipboard monitoring, and theming.</p>
+            <div class="project-tags">
+                <span class="tag">Tauri v2</span>
+                <span class="tag">React 19</span>
+                <span class="tag">Rust</span>
+                <span class="tag">SQLite</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/MostafaSalama/next-dm" target="_blank" class="project-link-repo">Source Code</a>
+            </div>
+        </div>
+
+        <!-- Global Tutoring Network -->
+        <div class="project-card">
+            <div class="project-card-accent"></div>
+            <h3>Global Tutoring Network</h3>
+            <p>Private community platform for elite educators with Proof of Work and Proof of Reputation verification.</p>
+            <div class="project-tags">
+                <span class="tag">Next.js 16</span>
+                <span class="tag">React 19</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Tailwind CSS 4</span>
+            </div>
+            <div class="project-links">
+                <a href="https://global-tutoring-network.vercel.app/" target="_blank" class="project-link-demo">Live Demo</a>
+                <a href="https://github.com/MostafaSalama/global-tutoring-network" target="_blank" class="project-link-repo">Source Code</a>
+            </div>
+        </div>
+
+        <!-- Survey System -->
+        <div class="project-card">
+            <div class="project-card-accent"></div>
+            <h3>Survey System</h3>
+            <p>Hierarchical surveys with weighted scoring algorithms, audit trails, and real-time weight validation.</p>
+            <div class="project-tags">
+                <span class="tag">Angular 21</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Express</span>
+                <span class="tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+                <a href="https://survey.marwanfazora.com/login" target="_blank" class="project-link-demo">Live Demo</a>
+                <a href="https://github.com/MostafaSalama/survey-app" target="_blank" class="project-link-repo">Source Code</a>
+            </div>
+        </div>
+
+        <!-- Nudj -->
+        <div class="project-card">
+            <div class="project-card-accent"></div>
+            <h3>Nudj</h3>
+            <p>HR maturity assessment platform for Saudi organizations with RTL support, AI-powered recommendations, and PDF/Excel reports.</p>
+            <div class="project-tags">
+                <span class="tag">Angular 21</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">OpenAI GPT-4o</span>
+            </div>
+            <div class="project-links">
+                <a href="http://nudj.tharwah.net/" target="_blank" class="project-link-demo">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- Taskeen -->
+        <div class="project-card">
+            <div class="project-card-accent"></div>
+            <h3>Taskeen</h3>
+            <p>Employee-position placement evaluation system with configurable criteria and bilingual Arabic/English support.</p>
+            <div class="project-tags">
+                <span class="tag">Angular 21</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Docker</span>
+            </div>
+            <div class="project-links">
+                <a href="https://taskeen.tharwah.net/" target="_blank" class="project-link-demo">Live Demo</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <!-- Contact Section -->
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Me</h2>
+<section id="contact" class="reveal">
+    <h2 class="section-title">Contact Me</h2>
     <!-- Contact Form -->
     <div class="contact-form">
         <form id="contactForm">
@@ -228,10 +321,12 @@
     <ul>
         <li><a href="https://github.com/MostafaSalama" target="_blank">GitHub</a></li>
         <li><a href="https://linkedin.com/in/mostafatourad" target="_blank">LinkedIn</a></li>
+        <li><a href="https://x.com/mostafatourad1" target="_blank">X / Twitter</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="./contact.html">Contact</a></li>
     </ul>
 
-    <p>© 2024 Mostafa Tourad</p>
+    <p>&copy; 2026 Mostafa Tourad</p>
 </footer>
 
 <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>
